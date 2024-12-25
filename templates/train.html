@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="60%, initial-scale=1.0">
+    <title>Train New Face</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Train New Face</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="name">Enter Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <button type="submit" class="btn-primary">Capture Image</button>
+        </form>
+        <div class="video-feed">
+            <img src="{{ url_for('video_feed') }}" width="100%">
+        </div>
+        <button onclick="window.location.href='/'" class="btn-secondary">Back to Home</button>
+    </div>
+</body>
+</html>
